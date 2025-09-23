@@ -23,6 +23,8 @@ function agregarAmigo() {
         nombresAmigos.push(nombre);
         input.value = ""; 
         mostrarLista();
+        asignarTextoElemento("resultado", `${nombre} agregado a la lista.`);
+
 }
 
 // Mostrar nombres de amigos en la lista
