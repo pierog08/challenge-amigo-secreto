@@ -25,3 +25,18 @@ function mostrarLista() {
     lista.innerHTML += `<li>${nombresAmigos[i]}</li>`;
   }
 }
+
+// Sorteo de los nombres
+
+function sortearAmigo() {
+  if (nombresAmigos.length === 0) {
+    alert("No hay amigos disponibles para sortear.");
+    return;
+  }
+
+  let indiceAleatorio = Math.floor(Math.random() * nombresAmigos.length);
+  let amigoSorteado = nombresAmigos[indiceAleatorio];
+
+  let resultado = document.getElementById("resultado");
+  resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
+}
