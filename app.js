@@ -13,7 +13,7 @@ function agregarAmigo() {
 
         nombresAmigos.push(nombre);
         input.value = ""; 
-        actualizarLista();
+        mostrarLista();
 }
 
 // Mostrar nombres de amigos en la lista
