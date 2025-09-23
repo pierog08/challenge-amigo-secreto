@@ -13,5 +13,15 @@ function agregarAmigo() {
 
         nombresAmigos.push(nombre);
         input.value = ""; 
-        console.log(nombresAmigos);
+        actualizarLista();
+}
+
+// Mostrar nombres de amigos en la lista
+
+function mostrarLista() {
+  let lista = document.getElementById("listaAmigos");
+  lista.innerHTML = ""; 
+  for (let i = 0; i < nombresAmigos.length; i++) {
+    lista.innerHTML += `<li>${nombresAmigos[i]}</li>`;
+  }
 }
