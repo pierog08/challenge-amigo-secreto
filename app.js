@@ -15,6 +15,11 @@ function agregarAmigo() {
             return;
         }
 
+        if (nombresAmigos.includes(nombre)) {
+            asignarTextoElemento("resultado", "Ese nombre ya fue agregado.");
+            return;
+        }
+
         nombresAmigos.push(nombre);
         input.value = ""; 
         mostrarLista();
