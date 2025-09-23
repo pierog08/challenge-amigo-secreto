@@ -50,3 +50,12 @@ function sortearAmigo() {
 
     asignarTextoElemento("resultado", `El amigo secreto es: <b>${amigoSorteado}</b>`);
 }
+
+// Reiniciar el juego
+
+function reiniciarJuego() {
+    nombresAmigos = [];
+    document.getElementById("listaAmigos").innerHTML = "";
+    asignarTextoElemento("resultado", "Juego reiniciado.");
+    document.getElementById("amigo").value = "";
+}
