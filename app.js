@@ -1,5 +1,9 @@
 let nombresAmigos = [];
 
+function asignarTextoElemento(id, texto) {
+    document.getElementById(id).innerHTML = texto;
+}
+
 // Agregar un nombre al array
 
 function agregarAmigo() {
@@ -7,7 +11,7 @@ function agregarAmigo() {
     let nombre = input.value.trim();
 
         if (nombre === "") {
-            alert("Por favor, inserte un nombre.");
+            asignarTextoElemento("resultado", "Ingresa un nombre válido.");
             return;
         }
 
@@ -19,24 +23,23 @@ function agregarAmigo() {
 // Mostrar nombres de amigos en la lista
 
 function mostrarLista() {
-  let lista = document.getElementById("listaAmigos");
-  lista.innerHTML = ""; 
-  for (let i = 0; i < nombresAmigos.length; i++) {
-    lista.innerHTML += `<li>${nombresAmigos[i]}</li>`;
-  }
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = ""; 
+    for (let i = 0; i < nombresAmigos.length; i++) {
+        lista.innerHTML += `<li>${nombresAmigos[i]}</li>`;
+    }
 }
 
 // Sorteo de los nombres
 
 function sortearAmigo() {
-  if (nombresAmigos.length === 0) {
-    alert("No hay amigos disponibles para sortear.");
-    return;
-  }
+    if (nombresAmigos.length === 0) {
+        asignarTextoElemento("resultado", "No hay amigos para sortear.");
+        return;
+    }
 
-  let indiceAleatorio = Math.floor(Math.random() * nombresAmigos.length);
-  let amigoSorteado = nombresAmigos[indiceAleatorio];
+    let indiceAleatorio = Math.floor(Math.random() * nombresAmigos.length);
+    let amigoSorteado = nombresAmigos[indiceAleatorio];
 
-  let resultado = document.getElementById("resultado");
-  resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
+    asignarTextoElemento("resultado", `El amigo secreto es: <b>${amigoSorteado}</b>`);
 }
