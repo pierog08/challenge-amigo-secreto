@@ -72,11 +72,11 @@ Aunque cumple con todas las funciones principales, se pueden agregar mejoras fut
 
 1. Clona este repositorio:  
    ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
+   git clone https://github.com/pierog08/challenge-amigo-secreto.git
 
 2. Entra a la carpeta del proyecto:
    ```bash
-   cd amigo-secreto
+   cd challenge-amigo-secreto
 3. Abre index.html en tu navegador (doble clic o usando servidor local).
 
 4. Ingresa nombres, haz clic en “Añadir”, luego en “Sortear amigo” para ver el resultado.
